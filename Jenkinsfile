@@ -6,8 +6,6 @@ node {
     } 
 
 
-    }
-    
     stage("try to build in docker") {
         /* app = docker.build("isptech/gitscan:latest" ) */
         /* app = docker.run("isptech/gitscan:latest " ) */
@@ -15,7 +13,5 @@ node {
         docker.image('isptech/gitscan').inside('-v $WORKSPACE:/codex') {
             sh 'ls /codex'
         }
-
-
     }
 }
