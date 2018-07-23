@@ -1,3 +1,10 @@
+
+pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
+    }
+}
+
 node {
 	def app
 	stage('Clone the app') {
@@ -11,10 +18,6 @@ node {
 	stage("try to build in docker") {
 		/* app = docker.build("isptech/gitscan:latest" ) */
 		/* app = docker.run("isptech/gitscan:latest " ) */
-	pipeline {
-    agent {
-        docker { image 'node:7-alpine' }
-    }
     stages {
         stage('Test') {
             steps {
@@ -22,9 +25,6 @@ node {
             }
         }
     }
-}
-
-
 	}
 }
 
