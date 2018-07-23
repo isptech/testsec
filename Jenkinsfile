@@ -33,13 +33,13 @@ node {
                     args '-v $WORKSPACE:/project'
                     reuseNode true
                 }
-            }
+            
             steps {
                 sh 'echo "i am in the docker container" '
                 sh 'aws --version'
             }
 
-    
+
     }
     
     stage("try to build in docker") {
