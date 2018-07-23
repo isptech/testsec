@@ -28,11 +28,11 @@ node {
     } 
 
     stage("now doing another step") {
-                    docker {
+                   /* docker {
                     image 'lvthillo/aws-cli'
                     args '-v $WORKSPACE:/project'
                     reuseNode true
-                }
+                } */ 
             
 
 
