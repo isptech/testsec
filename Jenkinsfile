@@ -1,6 +1,8 @@
 
 pipeline {
-
+     agent {
+        docker { image 'ubuntu' }
+    }  
         stages {
         stage('Test for Secrets') {
             agent {
