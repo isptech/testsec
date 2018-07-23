@@ -1,8 +1,8 @@
 
 pipeline {
-    agent {
+    /*  agent {
         docker { image 'node' }
-    }
+    }  */
         stages {
         stage('Test for Secrets') {
             agent {
