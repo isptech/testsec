@@ -5,7 +5,7 @@ node {
 	} 
 
 	stage("now doing another step") {
-	echo "going away"
+	echo "I am in `pwd`"
 	}
 	
 	stage("try to build in docker") {
