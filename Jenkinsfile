@@ -34,10 +34,6 @@ node {
                     reuseNode true
                 }
             
-            steps {
-                sh 'echo "i am in the docker container" '
-                sh 'aws --version'
-            }
 
 
     }
