@@ -10,8 +10,8 @@ node {
         /* app = docker.build("isptech/gitscan:latest" ) */
         /* app = docker.run("isptech/gitscan:latest " ) */
         
-        docker.image('isptech/gitsecret1').inside('-v $WORKSPACE:/codex') {
-            sh 'ls /codex'
+        docker.image('isptech/gitsecret1:latest').inside('-v $WORKSPACE:/codes -w /codes') {
+            sh 'bash /src/run.sh'
         }
     }
 }
