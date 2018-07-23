@@ -5,12 +5,26 @@ node {
 	} 
 
 	stage("now doing another step") {
-	echo "I am in `pwd`"
+	echo "I am in my dir"
 	}
 	
 	stage("try to build in docker") {
 		/* app = docker.build("isptech/gitscan:latest" ) */
 		/* app = docker.run("isptech/gitscan:latest " ) */
+	pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
+
+
 	}
 }
 
