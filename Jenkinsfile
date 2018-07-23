@@ -12,7 +12,7 @@ node {
         
         docker.image('isptech/gitsecret1:4').inside("-v ${WORKSPACE}:/codes") {
             sh '/src/run.sh' 
-            sh 'exit 1'
+            /* sh 'exit 1' */
         }
 
     }
