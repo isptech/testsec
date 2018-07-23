@@ -11,7 +11,15 @@ node {
         /* app = docker.run("isptech/gitscan:latest " ) */
         
         docker.image('isptech/gitsecret1:latest').inside('-v $WORKSPACE:/codes -w /codes') {
-            sh 'bash /src/run.sh'
+            /* sh 'bash /src/run.sh' */ 
         }
+
     }
 }
+
+/*
+if [ $? -eq 0 ]; then
+        echo "git secrets --scan OK"
+    else
+    echo "git secrets --scan FAIL"    
+    */  
