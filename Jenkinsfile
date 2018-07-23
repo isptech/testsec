@@ -20,7 +20,7 @@ pipeline {
     }
 }
 
-
+/*
 node {
 	def app
 	stage('Clone the app') {
@@ -37,4 +37,5 @@ node {
 
 	}
 }
+*/
 
